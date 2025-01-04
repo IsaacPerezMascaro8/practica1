@@ -44,7 +44,7 @@ public:
     // Sobrecarga del operador [](Devuelve elemento situado en posicion pos)
     T operator[](int pos) const {
         if (pos < 0 || pos >= n) {
-            throw out_of_range("Index out of range");
+            throw out_of_range("Posición Inválida");
         }
         return arr[pos];
     }
@@ -66,7 +66,7 @@ public:
 
     void insert(int pos, T e) override {
         if (pos < 0 || pos > n) {
-            throw out_of_range("Index out of range");
+            throw out_of_range("Posición Inválida");
         }
         if (n == max) {
             resize(max * 2);
@@ -88,7 +88,7 @@ public:
     //Elimina un elemento de la posicion pos
     T remove(int pos) override {
         if (pos < 0 || pos >= n) {
-            throw out_of_range("Index out of range");
+            throw out_of_range("Posición Inválida");
         }
         T removed = arr[pos];
         for (int i = pos; i < n - 1; ++i) {
