@@ -35,7 +35,7 @@ public:
     }
 
     // Sobrecarga del operador [] Devuelve elemento situado en posicion pos
-    T operator[](int pos) override {
+    T operator[](int pos){
         if (pos < 0 || pos >= n) {
             throw out_of_range("Posición inválida!");
         }
@@ -48,11 +48,13 @@ public:
 
     // Sobrecarga del operador << Imprime una instancia de ListLinked
     friend ostream& operator<<(ostream &out, const ListLinked<T> &list) {
+	out << "[";
         Node<T>* current = list.first;
         while (current != nullptr) {
             out << current->data << " ";
             current = current->next;
         }
+	out << "]";
         return out;
     }
 
