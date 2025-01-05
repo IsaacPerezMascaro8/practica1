@@ -31,3 +31,7 @@ ostream& operator<<(ostream& out, const Point2D& p) {
     return out;
 }
 
+void Point2D::translate(double incX, double incY) {
+    x += incX;
+    y += incY;
+}

@@ -13,6 +13,9 @@ public:
 
     //Calcular Distancia entre 2 puntos
     static double distance(const Point2D& a, const Point2D& b);
+    
+    //Método translate
+    void translate(double incX, double incY);
 
     //Comprobar si 2 puntos son iguales
     friend bool operator==(const Point2D& a, const Point2D& b);
