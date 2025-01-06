@@ -110,7 +110,7 @@ double Rectangle::perimeter() const {
 
 void Rectangle::translate(double incX, double incY) {
     for (int i = 0; i < N_VERTICES; ++i) {
-        vs[i].translate(incX, incY);  // Asumiendo que Point2D tiene un método translate
+        vs[i].translate(incX, incY);
     }
 }
 
