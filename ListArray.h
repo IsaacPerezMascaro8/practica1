@@ -4,6 +4,7 @@
 #include <stdexcept> 
 #include <ostream>   
 #include "List.h"
+#include <vector>
 
 using namespace std;
 
@@ -28,7 +29,8 @@ private:
         arr = new_arr;
         max = new_size;
     }
-
+    //PAra la clase Drawing
+    vector<T> data;
 public:
     // Constructor
     ListArray(){
@@ -120,7 +122,8 @@ public:
 
     int size() override {
         return n;
-    }    
+    }
+
 };
 
 #endif

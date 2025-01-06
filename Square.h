@@ -18,6 +18,8 @@ public:
     virtual void print() const override;  // Imprime información del cuadrado
 
     friend ostream& operator<<(ostream &out, const Square &square);
+    //Funcion añadida  por la clase Drawing
+    virtual void translate(double incX, double incY) override;
 
 private:
     static bool check(Point2D* vertices);  // Verifica si los vértices conforman un cuadrado válido

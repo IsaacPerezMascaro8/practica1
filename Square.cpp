@@ -51,6 +51,14 @@ ostream& operator<<(ostream &out, const Square &square) {
     return out;
 }
 
+void Square::translate(double incX, double incY) {
+    for (int i = 0; i < N_VERTICES; ++i) {
+        vs[i].translate(incX, incY);
+    }
+}
+
+
+
 // Verificación de cuadrado válido
 bool Square::check(Point2D* vertices) {
     double side1 = Point2D::distance(vertices[0], vertices[1]);
