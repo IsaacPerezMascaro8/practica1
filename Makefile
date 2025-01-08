@@ -1,3 +1,5 @@
+all: bin/testListArray bin/testNode bin/testListLinked bin/testPoint2D bin/testCircle bin/testRectangle bin/testSquare bin/testDrawing
+
 bin/testListArray: testListArray.cpp ListArray.h List.h
 	mkdir -p bin
 	g++ -o bin/testListArray testListArray.cpp ListArray.h List.h
@@ -39,7 +41,6 @@ bin/testRectangle: testRectangle.cpp Rectangle.o Shape.o Point2D.o
 Square.o: Square.h Square.cpp Rectangle.h Point2D.h Shape.h
 	g++ -c Square.cpp
 
-
 bin/testSquare: testSquare.cpp Square.o Rectangle.o Shape.o Point2D.o
 	mkdir -p bin
 	g++ -o bin/testSquare testSquare.cpp Square.o Rectangle.o Shape.o Point2D.o
@@ -50,7 +51,6 @@ Drawing.o: Drawing.h Drawing.cpp Shape.h List.h ListArray.h
 bin/testDrawing: testDrawing.cpp Drawing.o Shape.o Circle.o Square.o Rectangle.o Point2D.o
 	mkdir -p bin
 	g++ -o bin/testDrawing testDrawing.cpp Drawing.o Shape.o Circle.o Square.o Rectangle.o Point2D.o
-
 
 clean:
 	rm -r *.o *.gch bin
